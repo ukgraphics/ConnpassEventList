@@ -18,7 +18,7 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Entry x:Name="keyword" Grid.Column="0" Text="Xamarin" />
+            <Entry x:Name="keyword" Grid.Column="0" Text="タガヤス" />
             <Button x:Name="searchbtn" Grid.Column="1" Text="イベント情報を取得" Clicked="GetEvent" />
         </Grid>
         <Label Text="イベント情報" FontSize="Large" HorizontalOptions="FillAndExpand" />
