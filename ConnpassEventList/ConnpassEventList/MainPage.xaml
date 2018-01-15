@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ConnpassEventList"
+             x:Class="ConnpassEventList.MainPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+      iOS="10, 20, 10, 0" Android="10, 20, 10, 0" WinPhone="10, 20, 10, 0" />
+    </ContentPage.Padding>
+    <StackLayout>
+        <Image x:Name="logo" Aspect="AspectFit" HeightRequest="64" WidthRequest="188"/>
+        <Label Text="検索キーワードを入力してください" FontSize="Large" HorizontalOptions="FillAndExpand"/>
+        <Grid HorizontalOptions="FillAndExpand" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Entry x:Name="keyword" Grid.Column="0" Text="Xamarin" />
+            <Button x:Name="searchbtn" Grid.Column="1" Text="イベント情報を取得" Clicked="GetEvent" />
+        </Grid>
+        <Label Text="イベント情報" FontSize="Large" HorizontalOptions="FillAndExpand" />
+        <ListView x:Name="list" HasUnevenRows="true" ItemSelected="OnSelection" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical" Padding="10">
+                            <Label Text="{Binding started_at}" />
+                            <Label Text="{Binding title}" />
+                            <Label Text="{Binding series.title}" />
+                            <Label Text="{Binding address}" />
+                            <Label Text="{Binding place}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
