@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Reflection;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace ConnpassEventList
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : ContentPage
 	{
 		public MainPage()
