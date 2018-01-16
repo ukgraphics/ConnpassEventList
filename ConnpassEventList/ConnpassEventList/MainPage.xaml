@@ -27,11 +27,11 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Vertical" Padding="10">
-                            <Label Text="{Binding started_at}" />
-                            <Label Text="{Binding title}" />
-                            <Label Text="{Binding series.title}" />
-                            <Label Text="{Binding address}" />
-                            <Label Text="{Binding place}" />
+                            <Label Text="{Binding started_at, StringFormat='日時：{0}'}" />
+                            <Label Text="{Binding title}, StringFormat='タイトル：{0}'}" />
+                            <Label Text="{Binding series.title, StringFormat='グループ：{0}'}" />
+                            <Label Text="{Binding address, StringFormat='開催場所：{0}'}" />
+                            <Label Text="{Binding place, StringFormat='会場：{0}'}" />
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
