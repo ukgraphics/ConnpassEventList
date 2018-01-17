@@ -22,7 +22,7 @@
             <Button x:Name="searchbtn" Grid.Column="1" Text="イベント情報を取得" Clicked="GetEvent" />
         </Grid>
         <Label Text="イベント情報" FontSize="Large" HorizontalOptions="FillAndExpand" />
-        <ListView x:Name="list" HasUnevenRows="true" ItemSelected="OnSelection" >
+        <ListView x:Name="list" HasUnevenRows="true" ItemTapped="OnSelection" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
