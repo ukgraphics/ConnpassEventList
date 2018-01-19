@@ -10,12 +10,13 @@ namespace ConnpassEventList
 		{
 			InitializeComponent ();
 
-            var htmlSource = new HtmlWebViewSource();
-            htmlSource.Html = eventItem.description;
-            detail.Source = htmlSource;
+            // HTML文字列
+            //var htmlSource = new HtmlWebViewSource();
+            //htmlSource.Html = eventItem.description;
+            //detail.Source = htmlSource;
 
-            //detail.Source = eventItem.event_url;
-
+            // Webページ
+            detail.Source = new UrlWebViewSource { Url = eventItem.event_url };
         }
 	}
 }

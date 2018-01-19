@@ -9,7 +9,7 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <WebView x:Name="detail" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"  />
+                <WebView x:Name="detail" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

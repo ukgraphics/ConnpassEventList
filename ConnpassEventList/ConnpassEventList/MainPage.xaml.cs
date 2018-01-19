@@ -24,9 +24,9 @@ namespace ConnpassEventList
             list.ItemsSource = result;
         }
 
-        public void OnSelection(object sender, SelectedItemChangedEventArgs e)
+        public void OnSelection(object sender, ItemTappedEventArgs  e)
         {
-            var selecteditem = e.SelectedItem as Event.EventItem;
+            var selecteditem = e.Item as Event.EventItem;
 
             Navigation.PushAsync(new DetailPage(selecteditem), true);
         }
